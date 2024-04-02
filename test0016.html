@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <h1>숫자 관련 입력</h1>
+            <label for="number">숫자 입력: </label>
+            <input type="number" name="many_number" min="0" max="5">개
+            <input type="range" name="many_range" min="10" max="20" value=10s tep="5">개
+        </fieldset>
+        <fieldset>
+            <h1>날짜 관련 입력</h1>
+            <input type="date" name="date">
+            <input type="month" name="month">
+            <input type="year" name="year">
+        </fieldset>
+        <fieldset>
+            <h1>시간 관련 입력</h1>
+            <input type="time" name="time" min="2024-03-20" max="2024-08-10">
+            <input type="datetime" name="datetime">
+            <input type="datetime-local" name="datetime-local">
+        </fieldset>
+        <input type="submit">
+    </form>
+</body>
+    <!--
+        http://127.0.0.1:5500/test0016.html?many_number=5&many_range=15&date=2024-03-25&month=2024-03&year=2024&time=11%3A53&datetime=&datetime-local=2024-03-25T11%3A53
+    -->
+</html>

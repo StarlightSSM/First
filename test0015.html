@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>상품 선택</legend>
+            <h1>주문할 상품을 선택해 주세요.</h1>
+            <label for="chk1">선물용 3kg</label>
+            <input type="checkbox" name="gift_type" value="s_3" id="chk1">
+            <label for="chk2">선물용 5kg</label>
+            <input type="checkbox" name="gift_type" value="s_5" id="chk2">
+            
+            <h1>포장 선택(radio test)</h1>
+            <label for="rd1"><input name="pck_type" type="radio" value="yes" id="rd1" checked>선물 포장</label>
+            <label for="rd2"><input name="pck_type" type="radio" value="no" id="rd2">선물 포장 안 함</label>
+            
+            <input type="submit">
+        </fieldset>
+        <!--
+            http://127.0.0.1:5500/test0015.html?gift_type=s_3&pck_type=yes
+        -->
+    </form>
+</body>
+</html>

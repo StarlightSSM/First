@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{color: red;}
+        a[desc] {
+            color: yellow;
+        }
+        #basic a{color: blue;}
+        #basic a[desc=special] {color: yellow;}
+        #id1 a[class~=button] {color: red;}
+        
+        #id2 a[title|=us]{color: red;}
+        #id2 a[title|=j]{color: red;}
+        #id2 a[title|=chn]{color: red;}
+        
+        #id3 a[title^=eng]{color: red;}
+        #id3 a[title^=ja]{color: red;}
+        #id3 a[title^=chn]{color: red;}
+
+        #id4 a[href$=docx]{color: red;}
+        #id4 a[href$=hwp]{color: blue;}
+        #id4 a[href$=pdf]{color: gray;}
+
+        #id5 a[href*=naver]{color: green;}
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a>메인 메뉴</a></li>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#" desc="usual">메뉴3</a></li>
+        <!-- special만 style이 지정되어 있으므로, usual은 아무런 적용이 없다. -->
+        <li><a href="#" desc="special">메뉴4</a></li>
+    </ul>
+    <!-- p328 -->
+    <div id="basic">
+        <h1>~= |= ^= $= *=</h1>
+        <div id="id1">
+            <h1>여러 값 중에서 특정 속성 값이 포함 ~=</h1>
+            <ul>
+                <li><a href="#" class="flat">메뉴1</a></li>
+                <li><a href="#" class="flat">메뉴2</a></li>
+                <li><a href="#" class="button">메뉴3</a></li>
+                <li><a href="#" class="flat button">메뉴4</a></li>
+            </ul>
+        </div>
+        <div id="id2">
+            <h1>여러 값 중에서 특정 속성 값이 포함(hypen) -> |=</h1>
+            <ul>
+                <li><a href="#" title="us-eng">미국 영어</a></li>
+                <li><a href="#" title="ja">일본어</a></li>
+                <li><a href="#" title="j-a">일본어</a></li>
+                <li><a href="#" title="chn">중국어</a></li>
+            </ul>
+        </div>
+        <!-- p331 -->
+        <div id="id3">
+            <h1>특정 값으로 끝나는 속성 요소 선택</h1>
+            <ul>
+                <li><a href="#" title="us-eng">미국 영어</a></li>
+                <li><a href="#" title="ja">일본어</a></li>
+                <li><a href="#" title="j-a">일본어</a></li>
+                <li><a href="#" title="chn">중국어</a></li>
+            </ul>
+        </div>
+        <div id="id4">
+            <h1>특정 값을 포함하는 속성 요소 선택</h1>
+            <p>hwp: 파란색, docx: 빨간색, pdf: 회색</p>
+            <ul>
+                <li><a href="intro.hwp">결산안</a></li>
+                <li><a href="11장.docx">11장</a></li>
+                <li><a href="결론.pdf">결론</a></li>
+            </ul>
+        </div>
+        <div id="id5">
+            <h1>특정 값을 포함하는 속성 요소 선택</h1>
+            <p>naver 사이트</p>
+            <ul>
+                <li><a href="https://www.naver.com">링크1</a></li>
+                <li><a href="https://m.naver.com">링크2</a></li>
+                <li><a href="https:/mail.google.com">링크3</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #nav ul{list-style: none;}
+        #nav li{
+            display: inline;
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid magenta;
+        }
+
+        #nav1 li{
+            display: inline-block;
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid magenta;
+        }
+    </style>
+    <!-- inline 속성은 화면창을 줄이면 서로 겹치는 문제가 발생,
+         inline-block 속성을 사용하면 서로 겹치는 일 없이 공간 부족 시
+         자동으로 다음 줄에 배치됨.-->
+</head>
+<body>
+    <div style="display: inline; border: 1px solid black;
+     width: 100px; height: 100px;">
+        나는 div 그래서 block 요소.. 였다가 inline 됨.
+    </div>
+    <span style="display: block; border: 1px solid black;
+     width: 100px; height: 100px;">
+        나는 span 그래서 inline 요소.. 였다가 block 됨.
+    </span>
+
+    <!-- 굳이?? 이렇게 쓴다고? -->
+    <div style="display: none;">까꿍</div>
+
+    <div id="nav">
+        <ul>
+            <li>menu 1</li>
+            <li>menu 2</li>
+            <li>menu 3</li>
+            <li>menu 4</li>
+        </ul>
+    </div>
+
+    <div id="nav1">
+        <ul>
+            <li>menu 1</li>
+            <li>menu 2</li>
+            <li>menu 3</li>
+            <li>menu 4</li>
+        </ul>
+    </div>
+</body>
+</html>

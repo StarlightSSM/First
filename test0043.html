@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .desc{
+            width: 100px; height: 100px; 
+            margin: 10px; padding: 10px; float: left;
+            background-color: beige;
+            border: 10px dashed black;
+        }
+        #border-box{
+            background-clip: border-box;
+        }
+        #padding-box{
+            background-clip: padding-box;
+        }
+        #content-box{
+            background-clip: content-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="desc" id="border-box">1</div>
+        <div class="desc" id="padding-box">2</div>
+        <div class="desc" id="content-box">3</div>
+    </div>
+</body>
+</html>

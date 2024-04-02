@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p, span{border: 1px solid black;}
+    </style>
+</head>
+<body>
+    <h1>block vs inline</h1>
+    <h2>block</h2>
+    <p>혼자 한 줄 전부 차지</p>
+    <p>p tag, div</p>
+    <h2>inline</h2>
+    <p>컨텐츠 영역만큼 차지</p>
+    <p>button tag, img tag, span tag, ...</p>
+    <h2>test</h2>
+    <p>test: p tag</p>
+    <p>p tag</p>
+    <span>span tag</span>
+    <span>span tag</span>
+    <p style="width: 200px; height: 100px;">p tag</p>
+    <span style="width: 200px; height: 100px;">span tag 200px</span>
+    <!-- p 태그는 높이 크기 적용이 되는데, span 태그는 적용이 안된다. -->
+    <!-- 이미지는 크기 조절이 둘 다 가능하다.-->
+
+    <img style="width: 50px; height: 50px;" src="img/1.png">
+    <img src="img/1.png" width="250px" height="150px">
+</body>
+</html>

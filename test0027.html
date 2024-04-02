@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navi ul {list-style: none;}
+        .navi ul li {float: left;}
+        .navi a{padding: 20px; text-decoration: none; color: black;}
+        .navi a:hover{color: white;}
+        .navi a:active{background-color: burlywood;}
+        .content {clear: both;}
+
+        #intro:target, #room:target{background-color: burlywood;}
+        textarea:disalbed{background-color: lavender;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navi">
+            <ul>
+                <li><a href="#intro">이용 안내</a></li>
+                <li><a href="#room">객실 소개</a></li>
+                <li><a href="#">예약 방법 및 요금</a></li>
+                <li><a href="reservation">예약하기</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div id="intro">
+                <h2>이용 안내</h2>
+                <p>이용 안내에 관한 상세 내용입니다.</p>
+            </div>
+            <div id="room">
+                <h2>객실 소개</h2>
+                <p>객실 소개~~~~~~~~~~~~~~~~~~~~~~</p>
+            </div>
+            <div id="reservation">
+                <h2>예약하기</h2>
+                <form action="">
+                    <textarea disabled cols="30" rows="10">약관 ~~~~~~~~~~~~~~~~~~</textarea>
+                </form>
+            </div>
+            <a href="https://www.naver.com"></a>
+        </div>
+    </div>
+
+    <!-- 마우스 커서가 손가락으로 바뀐다. -->
+    <a href="https://www.daum.net">to daum</a>
+
+</body>
+</html>

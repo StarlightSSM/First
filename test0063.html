@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: url(img/wallpaper1920.jpg) no-repeat fixed;
+            background-size: cover;
+        }
+        #div1{
+            color: blue;
+            font-size: 10vw;
+        }
+        @media screen and (max-width: 1024px) {
+            body{
+                background: url(img/wallpaper865.jpg) no-repeat fixed;
+                background-size: cover;
+            }
+            #div2{
+                color: blue;
+                font-size: 10vw;
+            }
+        }
+
+        @media screen and (max-width: 768) {
+            body{
+                background: url(img/wallpaper432.jpg) no-repeat fixed;
+                background-size: cover;
+            }
+            #div3{
+                color: blue;
+                font-size: 10vw;
+            }
+        }
+        
+        @media screen and (max-width: 320px) {
+            body{
+                background: url(img/wallpaper292.jpg) no-repeat fixed;
+                background-size: cover;
+            }
+            #div4{
+                color: blue;
+                font-size: 10vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">대화면 장치</div>
+    <div id="div2">중화면 장치</div>
+    <div id="div3">소화면 장치</div>
+    <div id="div4">초소형 화면 장치</div>
+</body>
+</html>

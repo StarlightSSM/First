@@ -1,0 +1,6 @@
+https://search.naver.com/search.naver?
+where=nexearch
+&sm=top_hty
+&fbm=0
+&ie=utf8
+&query=%EB%94%B8%EA%B8%B0

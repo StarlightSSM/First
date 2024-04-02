@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="serverFunction" method="get">
+        <input type="hidden" name="customer_type" value="vvip">
+        <input type="text" name="username" placeholder="아이디 입력">
+        <input type="email" name="email" placeholder="test@example.com"
+        <input type="password" name="password">
+        <input type="url" name="urlname">
+        <input type="search" name="query">
+        <input type="submit" >
+    </form>
+
+    <!-- http://127.0.0.1:5500/serverFunction?username=안녕 -->
+    <!-- http://127.0.0.1:5500/serverFunction?username=%EC%95%88%EB%85%95
+        &password=%EB%B2%88%ED%98%B8-->
+</body>
+</html>

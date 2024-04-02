@@ -1,0 +1,15 @@
+frontend: view (UI/UX) -> search (SEO : Search Engine Optimization)
+SEO -> 검색 엔진 최적화
+
+html: div 지옥 -> 리액트(component) 컴포넌트로 해결
+자바스크립트: 콜백 지옥 -> 자바스크립트의 문법 최신화
+구 버전(ES5) -> 최신 버전(ES6)
+promise -> async/await
+
+CRUD    쇼핑몰                          WEB             SQL
+Create  주문                            POST            CREATE, SET
+read    주문 확인                       GET             SELECT
+Update  주문 수정, 주문 취소             PUT/PATCH      UPDATE, INSERT
+Delete  좀처럼 잘 안하는 경우가 많음.     DELETE        DROP
+
+

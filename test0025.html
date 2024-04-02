@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #space p {color: blue;}
+        #parent-child p {color: red;}
+        #adj + p{background-color: black; color: white;}
+        #sibling ~ p {background-color: black; color: white;}
+    </style>
+</head>
+<body>
+    <p>연결 선택자</p>
+    <p>빈칸, >(자식 선택자), +, -</p>
+    <h2>하위 선택자</h2>
+    <p>section p{}</p>
+    <section id="space">
+        <h1>예약 방법 & 요금</h1>
+        <p>온라인 예약 신청 방법</p>
+        <div>
+            <p>가족실 : 60000원</p>
+            <p>4인 공용 : 25000원</p>
+        </div>
+    </section>
+
+    <h2>자식 선택자</h2>
+    <p>parent-child p{}</p>
+    <section id="parent-child">
+        <h1>예약 방법 & 요금</h1>
+        <p>온라인 예약 신청 방법</p>
+        <div>
+            <p>가족실 : 60000원</p>
+            <p>4인 공용 : 25000원</p>
+        </div>
+    </section>
+
+    <h2>인접 형제 vs 형제</h2> <!-- 형제 요소 중에서 첫 번째 동생 요소만 선택한다. -->
+    <p>#adj + p{}</p> <!-- p324 -->
+    <section>
+        <h1 id="adj">예약 방법 & 요금</h1>
+        <p>온라인 예약 신청 방법</p>
+        <div>
+            <p>가족실 : 60000원</p>
+            <p>4인 공용 : 25000원</p>
+        </div>
+    </section>
+
+    <h2>형제 선택자</h2>
+    <p>#sibling ~ p{}</p> <!-- p324 -->
+    <section>
+        <h1 id="sibling">예약 방법 & 요금</h1>
+        <p>온라인 예약 신청 방법</p>
+        <div>
+            <p>가족실 : 60000원</p>
+            <p>4인 공용 : 25000원</p>
+        </div>
+    </section>
+
+    <!-- p326 -->
+</body>
+</html>

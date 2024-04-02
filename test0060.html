@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .page-title h1{
+            text-align: center;
+        }
+        .prod-list ul{
+            list-style: none;
+        }
+        .prod-list li{
+            float: left;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .prod-list li:hover .caption{
+            opacity: 1;
+            transform: translateY(-230px);
+        }
+        .prod-list .caption{
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            top: 250px; /* top: 100%; */
+            color: white;
+            z-index: 10;
+            background-color: rgba(0, 2, 3, 0.5);
+            opacity: 0;
+            transition: all 1s ease-in-out;
+            text-align: center;
+        }
+        .prod-list .img{
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page-title">
+            <h1>신상품 목록</h1>
+        </div>
+        <div class="prod-list">
+            <ul>
+                <li>
+                    <img src="img/prod1.jpg" alt="">
+                    <div class="caption">
+                        <h2>상품 1</h2>
+                        <p>상품 1 설명</p>
+                        <p>가격: ~~~~ 원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/prod2.jpg" alt="">
+                    <div class="caption">
+                        <h2>상품 2</h2>
+                        <p>상품 2 설명</p>
+                        <p>가격: ~~~~ 원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/prod3.jpg" alt="">
+                    <div class="caption">
+                        <h2>상품 3</h2>
+                        <p>상품 3 설명</p>
+                        <p>가격: ~~~~ 원</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

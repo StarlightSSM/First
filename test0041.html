@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        p{width: 100px;}
+        #pos1{position: absolute; left: 100px; top: 130px;}
+        #pos2{position: absolute; right: 100px; top: 130px;}
+        #pos3{position: absolute; left: 100px; bottom: 130px;}
+        #absolute-container{width: 100%; height: 400px; background-color: moccasin;}
+        #header{width: 100%; height: 200px; background-color: brown;}
+
+        #pos4{position: relative; left: 50px;}
+        #pos5{position: relative;}
+    </style>
+    <!-- position 속성은 전체 화면(=전체 문서) 창 기준으로 적용하는 것 
+        위아래에 뭐가 있든 말든 상관없음 -->
+</head>
+<body>
+    <div id="header"></div>
+    <div id="absolute-container">
+        <p id="pos1">글 1 글 1 글 1 글 1 글 1 글 1 글 1 글 1 글 1</p>
+        <p id="pos2">글 2 글 2 글 2 글 2 글 2 글 2 글 2 글 2 글 2</p>
+        <p id="pos3">글 3 글 3 글 3 글 3 글 3 글 3 글 3 글 3 글 3 글 3</p>
+    </div>
+    <div id="relative-container">
+        <p id="pos4">글 4 글 4 글 4 글 4 글 4 글 4 글 4 글 4 글 4 글 4</p>
+        <p id="pos5">글 5 글 5 글 5 글 5 글 5 글 5 글 5 글 5 글 5 글 5</p>
+    </div>
+    <div>
+        <h1>position 속성값</h1>
+        <p>static: 기본값</p>
+        <p>relative: static과 비슷한데 이동 가능</p>
+    </div>
+</body>
+</html>
