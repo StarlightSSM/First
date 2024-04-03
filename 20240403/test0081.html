@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<!-- 세미콜론 규칙 -->
+<script>
+    // 권장하지 않음
+    var n = 10
+
+    //권장함
+    var n = 10;
+
+    //권장하지 않음
+    var n = 10; var sum = 0;
+</script>
+<!-- 공백 규칙 -->
+<script>
+    //권장하지 않음
+    var num=2;
+    var sum=num+10;
+
+    //권장함
+    var num = 2;
+    var sum = num + 10;
+</script>
+<!-- 주석 작성 방법-->
+<script>
+    // 한 줄 주석 작성 방법
+    var today = new Date();
+    var h = today.getHours();
+
+    // 여러 줄 주석 작성 방법
+    /* 현재 날짜를 가져와
+       시와 분, 초로 추출하고
+       화면에 표시하는 스크립트
+    */
+    function startTime() { }
+</script>
+<!-- 식별자 규칙 -->
+<script>
+    num1            // 영문자로 시작하는 식별자
+    _doSomething    // 언더스코어(_)로 시작하는 식별자
+    checkTime()     // 두 단어로 만든 식별자
+</script>
+</html>
