@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var startNum = parseInt(prompt("정수 입력(x): ", ""));
+    var endNum = parseInt(prompt("정수 입력(y): ", ""));
+    var sum = 0;
+
+    for (i = startNum; i <= endNum; i++) {
+        sum += i;
+    }
+    document.write(`시작 정수: ${startNum}<br>`);
+    document.write(`종료 정수: ${endNum}<br>`);
+    document.write(`Sum ${startNum} to ${endNum} = ${sum}`);
+</script>
+</html>

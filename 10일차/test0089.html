@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>반복문</h1>
+    <script>
+        var sumVal = 0;
+
+        var i = 0;
+        while (i < 6) {
+            document.write(`<p>현재 i는 ${i}입니다.</p>`);
+            sumVal = sumVal + i;
+            i++;
+        }
+        document.write(`<p>현재 sumVal는 ${sumVal}입니다.</p>`);
+    </script>
+</body>
+<script>
+    var sumVal = 0;
+
+    for (var i = 0; i < 6; i++) {
+        document.write(`<p>현재 i는 ${i}입니다.</p>`);
+        sumVal = sumVal + i;
+    }
+    document.write(`<p>현재 sumVal는 ${sumVal}입니다.</p>`);
+</script>
+</html>
