@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var input;
+    var sum = 0;
+    var avg = 0.0;
+    var arrInt = [];
+    var min = Infinity;
+    var max = 0;
+
+    while (1) {
+        input = parseInt(prompt("양수(자연수) 입력: "));
+        if (input === 0) {
+            alert("프로그램을 종료합니다.");
+            break;
+        }
+        if (input > 0) {
+            arrInt.push(input);
+            sum += input;
+            avg = sum / arrInt.length;
+
+            if (input < min) {
+                min = input;
+            }
+            else if (input > max) {
+                max = input;
+            }
+        }
+    }
+    document.write(`평균: ${avg} `);
+    document.write(`최대값: ${max} `);
+    document.write(`최소값: ${min} `);
+</script>
+</html>

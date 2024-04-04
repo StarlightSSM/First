@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .star {
+        font-size: 20px;
+    }
+    *{ line-height: 0.8;}
+</style>
+<body>
+    
+</body>
+<script>
+    document.write('<table>');
+    for (var i = 1; i < 8; i++) {
+        document.write('<tr>');
+        for (var j = 1; j < 8; j++) {
+            if (j > i) {
+                document.write(`<td>*</td>`);
+            } else {
+                document.write(`<td>${j}</td>`);
+            }
+        }
+        document.write('</tr>');
+    }
+    document.write('</table>');
+</script>
+<br>
+<script>
+    for (var i = 1; i < 8; i++) {
+        for (var j = 1; j < 8; j++) {
+            if (j > i) {
+                document.write(`<span class="star">*</span>`);
+            } else {
+                document.write(`<span>${j}</span>`);
+            }
+        }
+        document.write(`<br>`);
+    }
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    for (var i = 1; i < 5; i++) {
+        document.write(`*`);
+        for (var j = 1; j < 5; j++) {
+            if (i > j) {
+                document.write(`*`);
+            } else {
+                document.write(` `);
+            }
+        }
+        document.write(`<br>`);
+    }
+
+    document.write(`<br>`);
+</script>
+<script>
+    var rows = 3;
+    var spaces = rows - 1;
+    var stars = 1;
+
+    for (var i = 0; i < rows; i++) {
+        for (var j = 0; j < spaces; j++) {
+            document.write('&nbsp;');
+        }
+        for (var k = 0; k < stars; k++) {
+            document.write('*');
+        }
+        document.write('<br>');
+        spaces--;
+        stars += 2;
+    }
+</script>
+</html>
