@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var count = 0;
+    var num = 682;
+    while(num != 1) {
+        if (num % 2 == 0) {
+            num /= 2;
+            count++;
+        }
+        else {
+            num = ((num*3) + 1) / 2;
+            count++;
+        }
+    }
+    document.write(`총 작업 횟수: ${count}회`);
+</script>
+</html>

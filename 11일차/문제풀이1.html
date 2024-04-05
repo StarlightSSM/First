@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var count = 0;
+    for (var a = 1; a <= 100; a++) {
+        for (var b = a; b <= 100; b++) {
+            for (var c = b; c <= 100; c++) {
+                if (a ** 2 + b ** 2 === c ** 2) {
+                   document.write(`${a}, ${b}, ${c}<br>`);
+                   count++;
+                }
+            }
+        }
+    }
+    document.write(`가능한 조합의 개수는 ${count}개 입니다.`);
+</script>
+<script>
+    var count = 0;
+    for (var a = 1; a <= 100; a++) {
+        for (var b = a; b <= 100; b++) {
+            var c = Math.sqrt(a*a + b*b);
+            if(c === Math.floor(c) && c <= 100)
+                count++;
+            }
+        }
+    document.write(count)
+</script>
+<script>
+    var count = 0;
+    for (var a = 1; a <= 100; a++) {
+        for (var b = a; b <= 100; b++) {
+            var cSquare = a ** 2 + b ** 2;
+            var c = Math.sqrt(cSquare);
+            if (c === Math.floor(c) && c <= 100) {
+                document.write(`${a}, ${b}, ${c}<br>`);
+                count++;
+            }
+        }
+    }
+    document.write(`가능한 조합의 개수는 ${count}개 입니다.`);
+</script>
+</html>
