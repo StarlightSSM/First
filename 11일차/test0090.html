@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 5px;
+            font-size: 2em;
+        }
+        #seat3{
+            color: white; 
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>자리 배치도</h1>
+</body>
+<script>
+    var memNum = parseInt(prompt("입장객은 몇 명인가요?"));
+    var colNum = parseInt(prompt("한 줄에 몇 명씩 있습니까?"));
+
+    if (memNum % colNum === 0) 
+        rowNum = parseInt(memNum / colNum);
+    else 
+        rowNum = parseInt(memNum / colNum) + 1;
+
+    document.write(`<table>`);
+    for (var i = 0; i < rowNum; i++) {
+        document.write(`<tr>`);
+        for (var j = 0; j < colNum; j++) {
+            seatNo = (j + 1) + i * colNum;
+            if (seatNo > memNum) break;
+            document.write(`<td id="seat${seatNo}">`);
+            document.write(`좌석 ${seatNo}`);
+            document.write(`</td>`);
+        }
+        document.write(`</tr>`);
+    }
+    document.write(`</table>`);
+
+    var mySeatNum = parseInt(prompt("너 어디 앉을래요?"));
+
+    var mySeat = document.querySelector(`#seat${mySeatNum}`);
+    mySeat.onclick = function() {
+        mySeat.style.color = "white";
+        mySeat.style.background = "blue";
+    };
+    
+</script>
+</html>
