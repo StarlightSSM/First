@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #desc {
+            display: none;
+        }
+        #open {
+            background-color: rgba(240, 255, 255, 0.516);
+            position: absolute;
+            bottom: 30px;
+            left: 20px;
+            border: solid rgba(0, 0, 0, 0.456);
+        }
+        #close {
+            background-color: rgba(240, 255, 255, 0.516);
+            position: absolute;
+            bottom: 45%;
+            left: 5%;
+            border: solid rgba(0, 0, 0, 0.456);
+        }
+        #item {
+            position: relative;
+            width: 400px;
+        }
+        #itme img {
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="item">
+        <img src="/img/flower.jpg" alt="">
+        <button class="over" id="open" onclick="showDetail()">상세 설명 보기</button>
+        <div id="desc" class="detail">
+            <h1>등심붗꽃</h1>
+            <p>북아메리카 원산으로 각지에서 관상초로 흔히 심고 있는 귀한 식물이다. 길가나 잔디밭에서 흔히 볼 수 있다.
+            아주 작은 씨앗을 무수히 많이 가지고 있는데 바람을 이용해 씨앗들을 날려보내거나, 
+            뿌리줄기를 통해 동일한 개체들을 많이 만들어 냄으로써 번식한다. </p>
+            <button id="close" onclick="hideDetail()">상세 설명 닫기</button>
+        </div>
+    </div>
+    <script>
+        function showDetail() {
+            document.querySelector('#desc').style.display = "block";
+            document.querySelector('#open').style.display = "none";
+        }
+
+        function hideDetail() {
+            document.querySelector('#desc').style.display = "none";
+            document.querySelector('#open').style.display = "block";
+        }
+    </script>
+</body>
+</html>

@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .accent {
+            color: blueviolet;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
     <script>
@@ -20,6 +27,11 @@
         }
         const result2 = addNumber(2, 3);
         console.log(result2);
+
+        (function() {
+            var userName = prompt("이름 입력: ");
+            document.write(`안녕하세요? <span class='accent'> ${userName} </span>님!`);
+        }());
     </script>
 </body>
 </html>
