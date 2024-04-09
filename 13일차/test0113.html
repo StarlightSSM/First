@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *, img { margin:0; padding: 0;}
+        .container {
+            width: 650px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="bigplt" style="width: 100%;" src="/img/coffee-blue.jpg" alt="">
+        
+        <img id="color" onclick="select('blue')" style="width: 32%;" src="/img/coffee-blue.jpg" alt="">
+        <img id="color" onclick="select('gray')" style="width: 32%;" src="/img/coffee-gray.jpg" alt="">
+        <img id="color" onclick="select('pink')" style="width: 32%;" src="/img/coffee-pink.jpg" alt="">
+    </div>
+    <script>
+        function select(color) {
+            var imgPath = `/img/coffee-${color}.jpg`;
+            document.getElementById("bigplt").setAttribute("src", imgPath);
+        }
+    </script>
+</body>
+</html>

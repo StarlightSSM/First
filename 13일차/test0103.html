@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="openPop4()">open pop4</button>
+    <script>
+        window.open("test0104_popup.html", "pop", "width=300px, height=200px");
+        window.open("test0104_popup2.html", "pop2", "width=300px, height=200px, left=100px, top=100px");
+        window.open("test0104_popup3.html", "pop3", "width=300px, height=200px, left=100px, top=200px");
+        function openPop4() {
+            window.open("test0104_popup4.html", "pop2", "width=300px, height=200px, left=100px, top=100px");
+        }
+    </script>
+</body>
+</html>
