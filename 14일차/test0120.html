@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 700px;
+            height: 500px;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>이미지 케러셀입니다. 좌우 화살표를 눌러 보세요.</h1>
+    <div id="container">
+        <div class="arrow" id="left">&lang;</div>
+        <div class="arrow" id="right">&rang;</div>
+    </div>
+    <script>
+        var container = document.querySelector("#container");
+        var arrows = document.querySelectorAll(".arrow");
+        var pics = ["/img/마늘빵.jpg", "/img/메론빵.jpg", "/img/모닝빵.jpg", "/img/소금빵.jpg", "/img/소시지빵.jpg"];
+        container.style.backgroundImage = `url(${pics[0]})`;
+        container.style.backgroundSize = `cover`;
+
+        let i = 0;
+        arrows.forEach (
+            arrow => {
+                arrow.addEventListener("click", (event) => {
+                    if (event.target.id === "left") {
+                        i--;
+                        if (i < 0) {
+                            i = pics.length - 1;
+                        }
+                    }
+                    else if (event.target.id === "right") {
+                        i++;
+                        if (i >= pics.legth) {
+                            i = 0;
+                        }
+                    }
+                    container.style.backgroundImage = `url(${pics[i]})`;
+                })
+            }
+        );
+    </script>
+</body>
+</html>
