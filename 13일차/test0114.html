@@ -8,12 +8,23 @@
 <body>
     <img id="Leserrafim" src="/img/restmb_allidxmake.jpeg" alt="">
     <p id="click"></p>
+    <p id="name"></p>
     <script>
         document.getElementById("Leserrafim").addEventListener("click", 
         (e) => {
             document.getElementById("click").innerText = 
             `event type: ${e.type}, x좌표: ${e.pageX}, y좌표: ${e.pageY}`;
+            let x = e.pageX; let y = e.pageY;
+            if ((210 < x && x < 270) && (206 < y && y < 271)) {
+                document.getElementById("name").innerHTML = "<a href='https://namu.wiki/w/%EA%B9%80%EC%B1%84%EC%9B%90(LE%20SSERAFIM)'>김채원</a>";
+                // document.getElementById("name").innerText = "김채원";
+                //location.href="https://namu.wiki/w/%EA%B9%80%EC%B1%84%EC%9B%90(LE%20SSERAFIM)";
+            }
+            else {
+                document.getElementById("name").innerText = "맴버를 클릭하세요.";
+            }
         });
+        // (260, 271), (228, 221)
     </script>
 </body>
 </html>
