@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>궤도 그리기</title>
+<style>
+    .orbit {
+        width: 300px; /* 타원의 가로 길이 */
+        height: 150px; /* 타원의 세로 길이 */
+        border: 2px solid black; /* 테두리 스타일 */
+        border-radius: 50%; /* 타원 모양으로 만듦 */
+        position: relative; /* 자식 요소의 위치를 상대적으로 설정하기 위해 필요 */
+    }
+
+    .planet {
+        width: 20px; /* 행성의 크기 */
+        height: 20px;
+        background-color: blue; /* 행성의 색상 */
+        border-radius: 50%; /* 원 모양의 행성 */
+        position: absolute; /* 상위 요소 기준으로 위치 설정 */
+        top: 50%; /* 상위 요소의 중앙에서부터 세로 위치 */
+        left: 50%; /* 상위 요소의 중앙에서부터 가로 위치 */
+        transform-origin: center; /* 회전의 중심을 요소의 중심으로 설정 */
+        animation: orbit 5s linear infinite; /* 궤도 애니메이션 설정 */
+    }
+
+    @keyframes floatAnimation {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+</style>
+</head>
+<body>
+
+<div class="orbit">
+    <div class="planet"></div>
+</div>
+
+</body>
+</html>

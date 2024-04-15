@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>이미지 궤도 움직임</title>
+  <style>
+    canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="myCanvas" width="500" height="500"></canvas>
+  <script>
+    // 캔버스와 컨텍스트 가져오기
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    // 이미지 로드
+    var img = new Image();
+    img.src = "/img/딸기.jpg";
+    
+    // 이미지 초기 위치 설정
+    var x = 0;
+    var y = 0;
+    
+    // 궤도 경로 설정 (여기서는 간단히 직선 경로를 사용합니다)
+    var targetX = 400;
+    var targetY = 400;
+    
+    // 애니메이션 프레임 반복
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // 이미지 그리기
+      ctx.drawImage(img, x, y, 50, 50); // 이미지 크기는 필요에 따라 조절 가능
+      
+      // 새로운 위치 계산
+      x += (targetX - x) * 0.05; // 이동 속도 조절을 위해 0.05를 곱합니다.
+      y += (targetY - y) * 0.05;
+      
+      // 새로운 위치에 도달할 때까지 다음 프레임 호출
+      if ((Math.abs(targetX - x) > 1) || (Math.abs(targetY - y) > 1)) {
+        requestAnimationFrame(draw);
+      }
+    }
+
+    // 애니메이션 시작
+    img.onload = function() {
+      draw();
+    };
+  </script>
+</body>
+</html>
