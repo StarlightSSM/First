@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="messageInput" placeholder="메시지 입력" onkeypress="handleKeyPress(event)">
+
+    <button onclick="enqueueMessage()">메시지 큐에 추가</button>
+    <h1 id="messageDisplay">아직 큐가 비어 있네용</h1>
+    <p>큐 잔여량: <span id="queueCount"></span></p>
+    <script>
+        let messageQueue = [];
+        function enqueueMessage() {
+            const messageInput = document.getElementById("messageInput");
+            const message = messageInput.value;
+            messageQueue.push(message);
+            messageInput.value = ''; // 메시지 내용을 큐에 다 넣고 나면 내용 초기화
+            updateQueueCount();
+        }
+
+        function updateQueueCount() {
+            const queueCount = document.getElementById("queueCount");
+            queueCount.innerText = messageQueue.length;
+        }
+
+        function handleKeyPress(event) {
+            if (event.keyCode == 13) {
+                enqueueMessage();
+            }
+        }
+        setInterval(function() {
+            if (messageQueue.length > 0) {
+                const message = messageQueue.shift();
+                const messageDisplay = document.getElementById("messageDisplay");
+                messageDisplay.innerText = message;
+            }
+            updateQueueCount();
+        }, 10000);
+    </script>
+</body>
+</html>

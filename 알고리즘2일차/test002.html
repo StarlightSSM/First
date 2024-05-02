@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea id="editor" rows="10" cols="50"></textarea><br>
+    <button onclick="undo()">실행 취소</button>
+    <button onclick="redo()">다시 실행</button>
+    <script>
+        let undoStack = [];
+        let redoStack = [];
+        const editor = document.getElementById("editor");
+        editor.addEventListener('input', function () {
+            undoStack.push(editor.value)
+        });
+
+        function undo() {
+            if (undoStack.length > 0) {
+                const content = undoStack.pop();
+                redoStack.push(editor.value);
+                editor.value = content;
+            }
+            else {
+                alert("더 이상 되돌릴 내용이 없습니다.");
+            }
+        }
+
+        function redo() {
+            if (redoStack.length > 0) {
+                const content = redoStack.pop();
+                undoStack.push(editor.value);
+                editor.value = content;
+            }
+            else {
+                alert("다시 실행할 내용이 없습니다.");
+            }
+        }
+    </script>
+</body>
+</html>
