@@ -1,0 +1,16 @@
+{
+    "development": {
+        "username": "root",
+        "password": "264811",
+        "database": "nodejsEx_1",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    },
+    "test": {
+        "username": "root",
+        "password": "264811",
+        "database": "database_test",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    }
+}

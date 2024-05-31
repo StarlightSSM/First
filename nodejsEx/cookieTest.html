@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 해당 파일은 라이브 서버로 돌려서 확인해야됨 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="set_my_cookie()">쿠키를 설정해보자</button>
+    <button onclick="get_my_cookie()">쿠키를 살펴보자</button>
+    <button onclick="reset_my_cookie()">쿠키를 리셋해보자</button>
+    <script>
+        document.cookie = "username=sumin211";
+        function set_my_cookie() {document.cookie = "username=suminshin211";}
+        function get_my_cookie() {alert(document.cookie);}
+        function reset_my_cookie() {document.cookie="username=";}
+    </script>
+</body>
+</html>
