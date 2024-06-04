@@ -5,14 +5,16 @@ import './index.css';
 // import App from './ex2SimpleCounter/App';
 // import App from './p80/App';
 // import App from './exTodo/App';
-import App from './CounterClassVsFunction/App';
+// import App from './CounterClassVsFunction/App';
+import App from './AppLifeCycle/App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  // <React.StrictMode>
+  //   <App />
+  // </React.StrictMode>
+  <App/>
 );
 
 // If you want to start measuring performance in your app, pass a function

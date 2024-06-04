@@ -14,10 +14,10 @@ class Counter extends Component {
 
     componentDidUpdate(prevProps, prevState){
         if (prevState.count !== this.state.count) {
-            console.log("Count state has changed", this.state.count);
+            console.log("Count state has changed:", this.state.count);
         }
         if (prevState.name !== this.state.name) {
-            console.log("Name state has changed", this.state.name);
+            console.log("Name state has changed:", this.state.name);
         }
     }
 
