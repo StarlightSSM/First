@@ -1,0 +1,11 @@
+.App {
+    margin: 0 auto;
+    width: 500px;
+}
+
+.App > section {
+    padding: 20px;
+    background-color: lightgray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
