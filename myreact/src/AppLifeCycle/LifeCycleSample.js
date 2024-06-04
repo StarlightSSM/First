@@ -5,8 +5,8 @@ import { Component } from "react";
 // mount -> update -> unmount
 // mount: constructor -> getDerivedStateFromProps -> render -> componentDidMount
 // update: props, state, 부모의 화면, 
-// this.foreUpdate 이런 것들이 바뀔 때 update 한다.
-// getDerivedStateFromProps -> ShouldComponentUpdate -> render
+// this.forceUpdate 이런 것들이 바뀔 때 update 한다.
+// getDerivedStateFromProps -> shouldComponentUpdate -> render
 // -> getSnapshotBeforeUpdate -> componentDidUpdate
 // unmount: componentWillUnmount
 
