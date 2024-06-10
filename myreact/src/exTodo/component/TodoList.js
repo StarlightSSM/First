@@ -1,5 +1,5 @@
 import "./TodoList.css";
-import {useState, useRef} from "react";
+import {useState} from "react";
 import TodoItem from './TodoItem';
 
 const TodoList = ({todo, onUpdate, onDelete}) => {

@@ -15,7 +15,7 @@ class LifeCycleSample extends Component {
         super(props);
         this.state = {
             number: 0,
-            
+            color: null
         }
     }
     myRef = null;
@@ -24,19 +24,42 @@ class LifeCycleSample extends Component {
         if (nextProps.color !== prevState.color) {
             return { color: nextProps.color};
         }
+        return null;
     }
+
+    plusHandler = () => {this.setState({number:this.state.number + 1})};
 
     render() {
         console.log("난 지금 render 상태 임!!");
         return (
             <div>
-
+                <h1 style={{color:this.props.color}} ref={ref=>this.myRef=ref}>
+                    {this.state.number}</h1>
+                <p>color: {this.state.color}</p>
+                <button onClick={this.plusHandler}>증가하기</button>
             </div>
         )
     }
 
     componentDidMount() {
         console.log("난 지금 componentDidMount 상태 임!");
+    }
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log("난 지금 shouldComponentUpdate 상태 임!");
+        return true;
+    }
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log("난 지금 getSnapShotBeforeUpdate 상태 임!");
+        return null;
+    }
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log("난 지금 componentDidUpdate 상태 임!");
+        if (snapshot) {
+            console.log("snapshot(업데이트 전의 색상): ", snapshot);
+        }
+    }
+    componentWillUnmount() {
+        console.log("난 지금 componentWillUnmount 상태 임!");
     }
 }
 

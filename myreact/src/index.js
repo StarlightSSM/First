@@ -6,7 +6,9 @@ import './index.css';
 // import App from './p80/App';
 // import App from './exTodo/App';
 // import App from './CounterClassVsFunction/App';
-import App from './AppLifeCycle/App';
+// import App from './AppLifeCycle/App';
+// import App from './hookUseReducer/App';
+import App from './hookUseMemo/App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

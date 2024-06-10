@@ -1,0 +1,13 @@
+20240605
+ReactHook
+
+useState, useEffect, useRef,
+
+오늘 공부할거
+useMemo, useCallback (메모이제이션)
+useReducer 교재p184 (useState와 비슷)
+customHook
+리액트: 한번 수행한 오래 걸리는 일은 저장했던 것을 제공해서 금방
+처리해준다.
+useContext 교재p172, redux
+
