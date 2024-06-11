@@ -18,7 +18,12 @@ import './index.css';
 // import App from './propsDrillingUseContext/App';
 // import App from './propsDrillingRedux/App';
 // import App from './propsDrillingReduxToolkit/App';
-import App from './route1/App';
+// import App from './route1/App';
+// import App from './route2Br/App';
+// import App from './route3Hr/App';
+// import App from './route4LinkNavLink/App';
+// import App from './route5NestedRouting/App';
+import App from './styledComponent/App';
 
 import reportWebVitals from './reportWebVitals';
 
