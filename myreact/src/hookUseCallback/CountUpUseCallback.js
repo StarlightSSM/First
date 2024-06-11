@@ -1,4 +1,5 @@
-import React, {useState, useMemo} from 'react';
+import React, {useCallback, useState} from 'react';
+import Todos from './Todos';
 
 const expenpensiveCalculation = (num) => {
     console.log("계산 중이에요. 좀 오래 걸릴 것 같아요.");
@@ -11,31 +12,28 @@ const CountUp = () => {
     const [count, setCount] = useState(0);
     const [todos, setTodos] = useState([]);
 
-    const calculation = useMemo(() => expenpensiveCalculation(count), [count]);
+    const calculation = expenpensiveCalculation(count);
 
     const increment = () => {
         setCount(cnt=>cnt+1)
     };
 
-    const addTodo = () => {
-        setTodos(t=>[...t, "New Todo"]);
-    };
+    const addTodo = useCallback( 
+        () => {setTodos((t)=>[...t, "New Todo"])}, [todos]
+    );
 
     return (
         <div>
             <div>
-                <h2>My Todos - useMemo 없는 빈 껍데기!</h2>
-                <button onClick={addTodo}>AddTodo</button>
-                {
-                    todos.map(
-                        (todo, index) => (<p key={index}>{todo}</p>)
-                    )
-                }
+                <h2>My Todos - useCallback 없는 빈 껍데기!</h2>
+                <Todos todos={todos} addTodo={addTodo} />
+                <div>
+                    <div>Count: {count}</div>
+                    <button onClick={increment}>+</button>
+                </div>
             </div>
             <hr/>
             <div>
-                <div>Count: {count}</div>
-                <button onClick={increment}>+</button>
                 <h2>expensiveCalculation</h2>{calculation}
             </div>
         </div>

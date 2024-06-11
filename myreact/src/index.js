@@ -8,7 +8,18 @@ import './index.css';
 // import App from './CounterClassVsFunction/App';
 // import App from './AppLifeCycle/App';
 // import App from './hookUseReducer/App';
-import App from './hookUseMemo/App';
+// import App from './hookUseMemo/App';
+// import App from './hookUseCallback/App';
+// import App from './CustomHookFunc/App';
+// import App from './CustomHook/App';
+// import App from './propsDrillingNative/App';
+// import App from './propsDrillingUseMemo/App';
+// import App from './propsDrillingUseCallback/App';
+// import App from './propsDrillingUseContext/App';
+// import App from './propsDrillingRedux/App';
+// import App from './propsDrillingReduxToolkit/App';
+import App from './route1/App';
+
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

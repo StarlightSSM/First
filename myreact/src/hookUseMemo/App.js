@@ -1,9 +1,11 @@
-// import CountUp from "./CountUpUseMemo";
-import CountUp from "./CountUpBasic";
+import CountUp from "./CountUpUseMemo";
+//import CountUp from "./CountUpBasic";
 
 function App () {
     return (
-        <CountUp/>
+        <div>
+            <CountUp/>
+        </div>
     )
 }
 
