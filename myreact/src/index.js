@@ -23,7 +23,8 @@ import './index.css';
 // import App from './route3Hr/App';
 // import App from './route4LinkNavLink/App';
 // import App from './route5NestedRouting/App';
-import App from './styledComponent/App';
+// import App from './styledComponent/App';
+import App from './ex4Diary/App';
 
 import reportWebVitals from './reportWebVitals';
 

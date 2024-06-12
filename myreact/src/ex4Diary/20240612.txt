@@ -1,0 +1,3 @@
+개발 단계
+기획 -> 개발 -> 테스트 -> 출시
+web prototype 설계(...wire frame)
