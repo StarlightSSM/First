@@ -35,3 +35,27 @@ export const getEmotionImgById = (emotionId) => {
             return null;
     }
 }
+
+export const getMonthRangeById = (date) => {
+    const beginTimeStamp = new Date(
+        date.getFullYear(),
+        date.getMonth(), 1
+    ).getTime();
+    const endTimeStamp = new Date(
+        date.getFullYear(),
+        date.getMonth()+1,
+        0, // 0: 해당 월의 마지막 날
+        23, 59, 59
+    ).getTime();
+    return (
+        beginTimeStamp, endTimeStamp
+    );
+}
+
+export const emotionList = () => [
+    {id: 1, name: "완전 좋음", img: getEmotionImgById(1)},
+    {id: 2, name: "좋음", img: getEmotionImgById(2)},
+    {id: 3, name: "그럭저럭", img: getEmotionImgById(3)},
+    {id: 4, name: "나쁨", img: getEmotionImgById(4)},
+    {id: 5, name: "최악임", img: getEmotionImgById(5)},
+];

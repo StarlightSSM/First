@@ -1,6 +1,42 @@
 import './DiaryList.css';
+import Button from './Button';
+import DiaryItem from './DiaryItem';
+import {useNavigate} from 'react-router-dom';
+import { useEffect, useState } from "react";
 
-export default function DiaryList() {
+const sortOptionList = [
+    {value:"latest", name:"최신 순"},
+    {value:"oldest", name:"오래된 순"},
+]
+
+export default function DiaryList({data}) {
+    const navigate = useNavigate();
+    const [sortType, setSortType] = useState("latest");
+    const [sortedData, setSortedData] = useState([]);
+
+    useEffect(
+        ()=> {
+            const compare = (a, b) =>{
+                if (sortType === "latest") {
+                    return Number(b.data) - Number(a.data);
+                }
+                else {
+                    return Number(a.data) - Number(b.data);
+                }
+            }
+            const copyList = JSON.parse(JSON.stringify(data))
+            copyList.sort(compare);
+            setSortedData(copyList);
+        }, [data, sortType]
+    )
+
+    const onChangeSortType = (event) => {
+        setSortType(event.target.value);
+    }
+
+    const onClickNew = () => {
+        navigate("/new")
+    }
     return (
         <div className="DiaryList">
             <div className="menu-wrapper">

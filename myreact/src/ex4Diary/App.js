@@ -1,4 +1,4 @@
-import React, {useReducer, useRef, useEffect, useState} from 'react';
+import React, {useReducer, useRef, useEffect} from 'react';
 import {Routes, Route, BrowserRouter} from 'react-router-dom';
 
 import './App.css';
@@ -30,7 +30,7 @@ const mockData = [
 ]
 
 export const DiaryStateContext = React.createContext();
-export const DiaryDispatchContext = React.useContext();
+export const DiaryDispatchContext = React.createContext();
 
 function reducer(state, action) {
     switch(action.type) {
@@ -40,9 +40,9 @@ function reducer(state, action) {
         return [action.data, ...state];
         case "UPDATE":
         return state.map(
-            (item)=>{
-                String(item.id) === String(action.data.id) ? {...action.data} : item;
-            }
+            (item)=>
+                String(item.id) === String(action.data.id) ? {...action.data} : item
+            
         );
         case "DELETE":
         return state.filter((item)=>String(item.id) !== String(action.targetId));
@@ -59,7 +59,7 @@ export default function App(){
         ()=> {
             dispatch({type:"INIT", date:mockData})
         },
-        {}
+        []
     );
 
     const onCreate = (date, content, emotionId) => {

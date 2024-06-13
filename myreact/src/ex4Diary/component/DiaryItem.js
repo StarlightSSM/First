@@ -1,5 +1,5 @@
 import React from "react";
-import {useNavigate} from "@reduxjs/toolkit";
+import {useNavigate} from "react-router-dom";
 import './DiaryItem.css';
 import {getEmotionImgById} from '../util';
 import Button from './Button';
@@ -12,7 +12,7 @@ export default function DiaryItem({id, emotionId, content, date}){
         <div className="DiaryItem">
             <div onClick={goDetail} 
             className={["img-section", `img-section-${emotionId}`].join(" ")}>
-                <img src={getEmotionImgById(emotionId)}/>
+                <img alt="" src={getEmotionImgById(emotionId)}/>
             </div>
             <div className="info-section" onClick={goDetail}>
                 <div className="data-wrapper">
