@@ -1,27 +1,57 @@
 .carousel {
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .carousel-images {
-    display: flex;
-    overflow: hidden;
-    width: 330px; /* 이미지의 너비에 맞춰서 설정 */
-    height: 230px; /* 이미지의 높이에 맞춰서 설정 */
-    margin: 0 auto;
-    position: relative;
-  }
-  
-  .carousel-image {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s ease;
-  }
-  
-  .carousel-image.active {
-    display: block;
-  }
-  
+  position: relative;
+  text-align: center;
+  width: 20%;
+  height: 300px; /* 컨테이너 높이를 고정합니다 */
+}
+
+.carousel-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-image {
+  position: absolute; /* absolute로 변경하여 이미지가 겹치도록 합니다 */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease;
+  cursor: pointer;
+}
+
+.carousel-image.active {
+  opacity: 1;
+  z-index: 2; /* 활성화된 이미지를 위로 올립니다 */
+}
+
+.carousel-image:not(.active) {
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* width: 100%;
+  height: 100%; */
+  background-color: rgba(0, 0, 0, 0.5); /* 오버레이 색상과 투명도 조정 */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-image:hover::after {
+  opacity: 0;
+  z-index: 3;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.193); /* 오버레이 색상과 투명도 조정 */
+  transition: opacity 0.3s ease;
+}

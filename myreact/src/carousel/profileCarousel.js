@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './profileCarousel.css'; // CSS 파일 추가
 
 const ProfileCarousel = ({ profile }) => {
@@ -28,7 +28,6 @@ const ProfileCarousel = ({ profile }) => {
             src={image}
             alt={`${profile.name} ${index + 1}`}
             className={`carousel-image ${index === currentIndex ? 'active' : ''}`}
-            style={{ display: index === currentIndex ? 'block' : 'none' }}
             onClick={goDetails}
           />
         ))}
