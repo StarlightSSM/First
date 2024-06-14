@@ -9,7 +9,7 @@ function Header() {
 
 function Nav2(props) {
   const lis = {};
-  for (int i = 0; i < props.topics.length; i++) {
+  for (let i = 0; i < props.topics.length; i++) {
     let t = props.topics[i];
     lis.push( <li key={t.id}><a href={'/read/'+t.id}>{t.title}</a></li>)
   }
