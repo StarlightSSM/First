@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "First",
+			"path": ".."
+		},
+		{
+			"name": "nodebird-api",
+			"path": "../../Users/sumin/Downloads/nodebird-api"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501
+	}
+}
