@@ -25,7 +25,8 @@ import './index.css';
 // import App from './route5NestedRouting/App';
 // import App from './styledComponent/App';
 // import App from './ex4Diary/App';
-import App from './carousel/App';
+// import App from './carousel/App';
+import App from './Skeleton/App';
 
 import reportWebVitals from './reportWebVitals';
 

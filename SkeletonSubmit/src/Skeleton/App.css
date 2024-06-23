@@ -1,0 +1,7 @@
+.screen {
+    background-color: #ffffff;
+    height: 1285px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }

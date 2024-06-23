@@ -1,0 +1,140 @@
+.screen .navigation {
+    height: 164px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1893px;
+  }
+
+  .screen .text-wrapper {
+    color: #000000;
+    font-family: var(--body-text-font-family);
+    font-size: var(--body-text-font-size);
+    font-style: var(--body-text-font-style);
+    font-weight: var(--body-text-font-weight);
+    height: 30px;
+    left: 88px;
+    letter-spacing: var(--body-text-letter-spacing);
+    line-height: var(--body-text-line-height);
+    position: absolute;
+    top: 66px;
+    white-space: nowrap;
+  }
+  
+  .screen .element-search-input {
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    gap: 12px;
+    height: 46px;
+    left: 212px;
+    padding: 8px 16px 8px 12px;
+    position: absolute;
+    top: 59px;
+    width: 316px;
+  }
+  
+  .screen .search {
+    height: 24px;
+    position: relative;
+    width: 24px;
+  }
+  
+  .screen .label {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    color: #dadada;
+    display: -webkit-box;
+    flex: 1;
+    font-family: var(--presets-body2-font-family);
+    font-size: var(--presets-body2-font-size);
+    font-style: var(--presets-body2-font-style);
+    font-weight: var(--presets-body2-font-weight);
+    letter-spacing: var(--presets-body2-letter-spacing);
+    line-height: var(--presets-body2-line-height);
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+  }
+  
+  .screen .user {
+    height: 100px;
+    left: 1000px;
+    position: absolute;
+    top: 32px;
+    width: 508px;
+  }
+  
+  .screen .overlap-group {
+    height: 100px;
+    position: relative;
+  }
+  
+  .screen .element-profile-avatar {
+    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 8px;
+    left: 275px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .screen .graphic {
+    background-image: url(../img/user.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 48px;
+    height: 100px;
+    position: relative;
+    width: 100px;
+  }
+  
+  .screen .items {
+    align-items: center;
+    display: flex;
+    gap: var(--variable-collection-spacing-m);
+    height: 100px;
+    justify-content: flex-end;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 508px;
+  }
+  
+  .screen .button {
+    all: unset;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: var(--button-shadow);
+    box-sizing: border-box;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 8px;
+    justify-content: center;
+    padding: 8px 10px;
+    position: relative;
+  }
+  
+  .screen .div {
+    color: #000000;
+    font-family: "Inter-Medium", Helvetica;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 36px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .screen .polygon {
+    background-image: url(../img/Polygon.png);
+    height: 15px;
+    position: relative;
+    width: 17.32px;
+  }
